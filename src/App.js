@@ -9,7 +9,7 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <Canvas camera={{ fov: 70 }}>
-          <ambientLight intensity={0.5}></ambientLight>
+        <ambientLight intensity={0.5} />
           <spotLight
             intensity={0.5}
             position={[10, 10, 10]}
