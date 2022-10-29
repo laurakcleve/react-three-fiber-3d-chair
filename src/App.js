@@ -1,6 +1,5 @@
 import { Suspense } from 'react'
 import './App.css'
-import { Model } from './Winey-chair-export-compressed'
 import { Chair } from './Chair'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
