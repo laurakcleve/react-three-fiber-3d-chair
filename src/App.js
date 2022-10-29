@@ -3,13 +3,12 @@ import './App.css'
 import { Chair } from './Chair'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { proxy, useProxy } from 'valtio'
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Canvas>
+        <Canvas camera={{ fov: 70 }}>
           <ambientLight intensity={0.5}></ambientLight>
           <spotLight
             intensity={0.5}
@@ -20,7 +19,7 @@ function App() {
           <Suspense fallback='null'>
             <Chair />
           </Suspense>
-          <OrbitControls></OrbitControls>
+          <OrbitControls />
         </Canvas>
       </header>
     </div>
