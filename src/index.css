@@ -7,11 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 canvas {
   height: 600px;
+}
+
+.picker {
+  position: absolute !important;
+  top: 74px;
+  left: 70px;
 }
