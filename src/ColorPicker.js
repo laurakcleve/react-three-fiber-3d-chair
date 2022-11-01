@@ -1,7 +1,8 @@
 import { HexColorPicker } from 'react-colorful'
 function ColorPicker({ current, chairColors, setChairColors, partNames }) {
   return (
-    <div style={{ display: current ? 'block' : 'none' }}>
+    <div className='color-picker' style={{ display: current ? 'block' : 'none' }}>
+      <div className='picker-label'>{partNames[current]}</div>
       <HexColorPicker
         className='picker'
         color={chairColors[current]}
@@ -11,7 +12,6 @@ function ColorPicker({ current, chairColors, setChairColors, partNames }) {
           setChairColors(newColors)
         }}
       />
-      <h1>{partNames[current]}</h1>
     </div>
   )
 }

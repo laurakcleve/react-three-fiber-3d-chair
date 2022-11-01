@@ -36,36 +36,51 @@ function App() {
   })
 
   return (
-    <>
-      <Canvas camera={{ fov: 70, position: [3, 1.5, 4] }}>
-        <spotLight intensity={1} position={[20, 50, 50]} angle={0.5} />
-        <Suspense fallback='null'>
-          <Chair
-            colors={chairColors}
-            setColors={setChairColors}
-            hoveredPart={hoveredPart}
-            setHoveredPart={setHoveredPart}
-            current={current}
-            setCurrent={setCurrent}
-          />
-          <Environment preset='city' />
-          <ContactShadows
-            position={[0, -1.8, 0]}
-            opacity={0.5}
-            scale={100}
-            blur={0.4}
-            color='#000000'
-          />
-        </Suspense>
-        <OrbitControls />
-      </Canvas>
-      <ColorPicker
-        current={current}
-        chairColors={chairColors}
-        setChairColors={setChairColors}
-        partNames={partNames}
-      />
-    </>
+    <div className='container'>
+      <div className='image-container'>
+        <Canvas camera={{ fov: 70, position: [3, 1.5, 4] }}>
+          <spotLight intensity={1} position={[20, 50, 50]} angle={0.5} />
+          <Suspense fallback='null'>
+            <Chair
+              colors={chairColors}
+              setColors={setChairColors}
+              hoveredPart={hoveredPart}
+              setHoveredPart={setHoveredPart}
+              current={current}
+              setCurrent={setCurrent}
+            />
+            <Environment preset='city' />
+            <ContactShadows
+              position={[0, -1.8, 0]}
+              opacity={0.5}
+              scale={100}
+              blur={0.4}
+              color='#000000'
+            />
+          </Suspense>
+          <OrbitControls />
+        </Canvas>
+        <ColorPicker
+          current={current}
+          chairColors={chairColors}
+          setChairColors={setChairColors}
+          partNames={partNames}
+        />
+      </div>
+
+      <div className='details'>
+        <h1>Dining Chair</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consectetur
+          nostrum quae ipsam debitis enim vero! Laudantium corrupti maiores maxime
+          quibusdam provident totam, suscipit voluptate.
+        </p>
+        <div className='buy'>
+          <span className='price'>$750</span>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
   )
 }
 
